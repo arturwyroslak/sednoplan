@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const { Pool } = require('pg');
+const path = require('path');
 
 const connectionString = 'postgresql://postgres:Sednoplan1234@db.ljkcmffwbwlghohzwipj.supabase.co:5432/postgres';
 const pool = new Pool({
@@ -41,6 +42,9 @@ app.post('/modals/:id', async (req, res) => {
         res.status(500).send('Wystąpił błąd podczas zapisywania treści modalu');
     }
 });
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, 'public/index.html'));
+})
 
 app.listen(3000, () => {
     console.log('Serwer działa na porcie 3000');
