@@ -46,6 +46,24 @@ app.post('/modals/:id', async (req, res) => {
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, '../public/index.html'));
 })
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, '../public/admin.css'));
+})
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, '../public/admin.html'));
+})
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, '../public/admin.js'));
+})
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, '../public/script.js'));
+})
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, '../public/style.css'));
+})
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, '../logo.png'));
+})
 
 app.listen(3000, () => {
     console.log('Serwer działa na porcie 3000');
