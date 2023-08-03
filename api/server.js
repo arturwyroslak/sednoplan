@@ -9,7 +9,7 @@ const pool = new Pool({
 });
 
 const app = express();
-
+app.use(express.static(path.join(__dirname, 'public')));
 // Dodaj to, aby automatycznie przetwarzać ciała żądań JSON
 app.use(express.json());
 app.use(cors({
