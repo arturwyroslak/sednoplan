@@ -41,7 +41,7 @@ app.post('/modals/:id', async (req, res) => {
         console.error(error);
         res.status(500).send('Wystąpił błąd podczas zapisywania treści modalu');
     }
-});
+}); 
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'public/index.html'));
